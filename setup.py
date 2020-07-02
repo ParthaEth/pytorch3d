@@ -35,6 +35,7 @@ def get_extensions():
             "-D__CUDA_NO_HALF_OPERATORS__",
             "-D__CUDA_NO_HALF_CONVERSIONS__",
             "-D__CUDA_NO_HALF2_OPERATORS__",
+            "-gencode=arch=compute_50,code=sm_50"
         ]
         nvcc_flags_env = os.getenv("NVCC_FLAGS", "")
         if nvcc_flags_env != "":
